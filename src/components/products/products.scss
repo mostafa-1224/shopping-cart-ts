@@ -1,0 +1,68 @@
+@import '../../_shared/mixins';
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  .product {
+    width: 30%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(231, 140, 196);
+    >.product-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      >img {
+        width: 100%;
+      }
+    }
+    .actions{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      >button{
+        border: none;
+        outline: none;
+        color: #FFF;
+        border-radius: 8px;
+        cursor: pointer;
+        padding-block: 15px;
+        background-color: #263752;
+        transition: all ease-in-out 0.2s;
+      }
+      >a {
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        outline: none;
+        color: #FFF;
+        border-radius: 8px;
+        cursor: pointer;
+        padding-block: 15px;
+        background-color: #263752;
+        transition: all ease-in-out 0.2s;
+      }
+      >a:hover, button:hover {
+        background-color: #0066ff;
+      }
+    }
+
+    @include respond-to(small) {
+      width: 80%;
+    }
+  
+    @include respond-to(medium) {
+      width: 45%;
+    }
+  
+    @include respond-to(large) {
+      width: 30%;
+    }
+  }
+}
